@@ -76,12 +76,18 @@ nav {
 
 .nav__link--button {
     background-color: white;
-    padding: 18px 36px;
+    padding: 14px 32px;
     border-radius: 50px;
     color: rgb(0, 0, 0);
     font-size: 14px;
     letter-spacing: 0.1em;
     font-weight: 500;
+    transition: all 300ms ease;
+}
+
+.nav__link--button:hover {
+    background-color: darkgray;
+    color: white;
 }
 
 .movie__browse {
