@@ -115,6 +115,7 @@ nav {
     padding: 12px;
     border: none;
     overflow: hidden;
+    color: black;
 }
 
 .search__button--wrapper {
