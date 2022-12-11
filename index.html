@@ -41,6 +41,7 @@
               type="text"
               class="movie__browse--input"
               placeholder="Search by Movie Title"
+              onchange="onSearchChange(event)"
             />
             <div class="search__button--wrapper">
               <svg
@@ -72,7 +73,8 @@
         <h2 class="search__results">Search results:</h2>
         <select id="filter">
           <option value="" disabled selected>Sort</option>
-          <option value="RATING">Rating</option>
+          <option value="NEWEST_TO_OLDEST">Newest to Oldest</option>
+          <option value="OLDEST_TO_NEWEST">Oldest to Newest</option>
         </select>
       </div>
       <div class="movie__list">
