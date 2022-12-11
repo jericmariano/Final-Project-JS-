@@ -7,14 +7,16 @@ async function main() {
     movieListEl.innerHTML = moviesData.Search.map((movie) => `
     <div class="movie__card">
         <div class="movie__card--container">
-          <h3>Movie Title</h3>
-          <p><b>Year: </b>2000</p>
-          <p><b>imdbID: </b>tt1905041</p>
-          <p><b>Type: </b>movie</p>
-          <p><b>Poster: </b>image</p>
+        <img src="${movie.Poster}" class="movie__poster" alt="">
+        <div class="movie__description">
+          <h3 class="movie__title">${movie.Title}</h3>
+          <p class="movie__year"><b>Year: </b>${movie.Year}</p>
+          <p class="movie__ID"><b>imdbID: </b>tt1905041</p>
+          <p class="movie__type"><b>Type: </b>movie</p>
+        </div>
         </div>
       </div>`).join("")
-    console.log(moviesData)
+    console.log(moviesData.Search)
 }
 
 main();
