@@ -1,3 +1,12 @@
+/*
+add loading state
+add error if can't find a movie any search results
+don't repeat code
+check out local storage
+add to Search results: ""
+add sorting filter
+*/
+
 const movieListEl = document.querySelector('.movie__list')
 
 async function onSearchChange(event) {
@@ -6,11 +15,10 @@ async function onSearchChange(event) {
     const moviesData = await movies.json()
 
     movieListEl.innerHTML = moviesData.Search.map((movie) => moviesHTML(movie)).join("")
-    // find out how to add to search results
 }
 
 async function renderMovies() {
-    const movies = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=c5a8f649&s=hello`) // fix starting page without search, also don't repeat code^^, check out localStorage, FPP
+    const movies = await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=c5a8f649&s=hello`) 
     const moviesData = await movies.json()
 
     movieListEl.innerHTML = moviesData.Search.map((movie) => moviesHTML(movie)).join("")
@@ -20,7 +28,7 @@ function moviesHTML(movie) {
     return `
     <div class="movie__card">
         <div class="movie__card--container">
-        <img src="${movie.Poster}" class="movie__poster" alt="">
+        <img src="${movie.Poster}" class="movie__poster" alt="This image is unavailable.">
         <div class="movie__description">
           <h3 class="movie__title">${movie.Title}</h3>
           <p class="movie__year"><b>Year: </b>${movie.Year}</p>
