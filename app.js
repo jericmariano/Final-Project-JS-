@@ -5,7 +5,6 @@ don't repeat code
 check out local storage
 add to Search results: ""
 add sorting filter
-underline animation
 website clean up
 */
 
